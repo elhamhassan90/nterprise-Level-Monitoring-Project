@@ -2,7 +2,7 @@
 Monitoring + AD Integration + Linux Domain Join + Windows Exporter + Linux Exporter + Ansible Automation
 
 ## Architecure
- VM1 → Windows Server
+ VM1 → Windows Server (192.168.142.100)
        + Active Directory (Domain Controller)
        + Windows Exporter (via Ansible)
 
