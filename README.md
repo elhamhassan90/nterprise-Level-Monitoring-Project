@@ -18,7 +18,7 @@ Monitoring + AD Integration + Linux Domain Join + Windows Exporter + Linux Expor
 
 VM1 (Control) — Ansible controller + Prometheus + Grafana
 
-VM2 (AD / DC) — Windows Server running Active Directory + DNS (domain controller) + target Windows (Windows_Exporter)
+VM2 (AD / DC) — Windows Server running Active Directory + DNS (domain controller) 
 
 VM3 (Linux node) — target Linux (Node Exporter) — joined to AD
 
