@@ -28,3 +28,8 @@ VM4 (Windows node) — target Windows (windows_exporter) — joined to AD
 Active Directory installatiion and creating domain user ansible and add it to all joined windows nodes to the domain (ITI.LOCAL)
 - Ansible will connect to windows servers through winrm service on windows servers (opened ports 5985) 
 
+add gpo to add ansible user to the the local administrators group on all windows servers joined to the domain
+ create ou called All-Windows-Servers  and link the gpo to it 
+---
+Computer Configuration → Preferences → Control Panel Settings → Local Users and Groups → New → Local Group
+---
