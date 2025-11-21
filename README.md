@@ -58,6 +58,7 @@ This step is critical for several reasons:
 
 - Better maintainability & clean inventory:
   Ansible’s inventory becomes clean and simple: only server names—no IPs, no hard-coded credentials.
+  
 Example:
 ```
 [linux_nodes]
