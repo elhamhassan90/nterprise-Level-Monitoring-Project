@@ -204,7 +204,7 @@ realm list
 we will do the same for the other vm (node1) and join it the domain 
 
 installing ansible on vm linux (controller)
-``
+```
 sudo yum update -y   # update system 
 sudo yum install epel-release -y
 sudo yum install ansible -y
