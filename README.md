@@ -202,3 +202,24 @@ realm list
 ```
 
 we will do the same for the other vm (node1) and join it the domain 
+
+installing ansible on vm linux (controller)
+``
+sudo yum update -y   # update system 
+sudo yum install epel-release -y
+sudo yum install ansible -y
+ sudo useradd ansible #this user is special to ansible for ssh 
+sudo passwd ansible
+#to grant ansible usr sudo permissions with no password
+echo "ansible ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/ansible
+su - ansible
+ssh-keygen -t rsa -b 4096
+ssh-copy-id ansible@node1.iti.local  
+sudo nano /etc/ansible/hosts
+
+"
+[linux_nodes]
+node1
+"
+ansible -m ping linux_nodes
+```
