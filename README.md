@@ -123,7 +123,7 @@ I also need to configure the **time, timezone, and NTP** properly.
 Kerberos authentication is very strict with time, and the domain join will fail if the server time is not synchronized with the Domain Controller.
 So the time must be fully correct before running the join command.
 **
-
+```
 ###mount iso
 -----------------------------------
 df -h
@@ -174,6 +174,7 @@ systemctl restart chronyd.service
 timedatectl
 chronyc sources
 timedatectl
+```
 
 
 
