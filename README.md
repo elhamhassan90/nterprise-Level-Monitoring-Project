@@ -200,3 +200,5 @@ dyndns_auth = GSS-TSIG
 systemctl restart sssd
 realm list
 ```
+
+we will do the same for the other vm (node1) and join it the domain 
