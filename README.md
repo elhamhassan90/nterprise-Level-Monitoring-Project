@@ -204,6 +204,11 @@ realm list
 we will do the same for the other vm (node1) and join it the domain 
 
 installing ansible on vm linux (controller)
+
+In a standard enterprise setup using RHEL servers, Ansible Core can be installed directly from the mounted RHEL installation ISO, since the required packages are already included.
+
+However, in this project I am using CentOS Stream 9, whose installation ISO does not provide Ansible Core. Therefore, I installed Ansible Core from the EPEL repository right after creating the VM, before proceeding with the domain join and the rest of the configuration.
+
 ```
 sudo yum update -y   # update system 
 sudo yum install epel-release -y
