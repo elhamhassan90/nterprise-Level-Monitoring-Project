@@ -16,13 +16,13 @@ Monitoring + AD Integration + Linux Domain Join + Windows Exporter + Linux Expor
 
 ## Quick architecture (what we have)
 
-VM1 (Control) — Ansible controller + Prometheus + Grafana
+VM1 (Control) [192.168.142.222] — Ansible controller + Prometheus + Grafana
 
-VM2 (AD / DC) — Windows Server running Active Directory + DNS (domain controller) 
+VM2 (AD / DC)[192.168.142.100] — Windows Server running Active Directory + DNS (domain controller) 
 
-VM3 (Linux node) — target Linux (Node Exporter) — joined to AD
+VM3 (Linux node) [192.168.142.225] — target Linux (Node Exporter) — joined to AD
 
-VM4 (Windows node) — target Windows (windows_exporter) — joined to AD
+VM4 (Windows node) [192.168.142.150] — target Windows (windows_exporter) — joined to AD
 
 ## Preparing Environment
 **Preparing Windows Vms**
