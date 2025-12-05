@@ -213,19 +213,25 @@ However, in this project I am using CentOS Stream 9, whose installation ISO does
 sudo yum update -y   # update system 
 sudo yum install epel-release -y
 sudo yum install ansible -y
- sudo useradd ansible #this user is special to ansible for ssh 
-sudo passwd ansible
-#to grant ansible usr sudo permissions with no password
-echo "ansible ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/ansible
-su - ansible
+ansible --version
+sudo useradd ansible1 #this user is special to ansible for ssh 
+sudo passwd ansible1
+#to grant ansible1 usr sudo permissions with no password
+echo "ansible1 ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/ansible
+su - ansible1
 ssh-keygen -t rsa -b 4096
-ssh-copy-id ansible@node1.iti.local  
-sudo nano /etc/ansible/hosts
+ssh-copy-id ansible1@node1.iti.local  
+sudo nano /etc/ansible1/hosts
 ==
 [linux_nodes]
 node1
 ==
 ansible -m ping linux_nodes
+#pywinrm install (package requird for linux to deal with windows)
+sudo apt install python3-pip -y
+pip install "pywinrm>=0.3.0"
+pip show pywinrm
+
 ```
 
 
