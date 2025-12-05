@@ -217,7 +217,7 @@ ansible --version
 sudo useradd ansible1 #this user is special to ansible for ssh (linux servers) 
 sudo passwd ansible1
 #to grant ansible1 usr sudo permissions with no password
-echo "ansible1 ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/ansible
+echo "ansible1 ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/ansible1
 su - ansible1
 ssh-keygen -t rsa -b 4096
 ssh-copy-id ansible1@node1.iti.local  
